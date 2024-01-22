@@ -10,7 +10,7 @@
     <string name="key_phones_preference">phones</string>
     <string name="label_add_sender">Sender (number or text)</string>
     <string name="label_sender">Sender</string>
-    <string name="label_url">URL to send SMS</string>
+    <string name="label_url">Destination URL</string>
     <string name="label_json_template">Json Payload Template</string>
     <string name="label_json_headers">Headers</string>
     <string name="label_ignore_ssl">Ignore SSL/TLS certificate errors</string>
