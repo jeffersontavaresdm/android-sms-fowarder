@@ -37,6 +37,6 @@ Um serviço que registra o SmsReceiver para lidar com as mensagens SMS recebidas
 Inicia em primeiro plano com uma notificação se o dispositivo estiver executando o Android Oreo (versão 8.0) ou superior.
 
 **WebHookWorkRequest:**</br>
-Um trabalhador para realizar solicitações da web (WebHook) em segundo plano.
+Um worker para realizar solicitações da web (WebHook) em segundo plano.
 Usa HttpURLConnection para enviar dados para uma URL especificada com cabeçalhos opcionais.
 Implementa lógica de tentativas de repetição em caso de falha na solicitação.
