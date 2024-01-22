@@ -51,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
         if (requestCode != PERMISSION_CODE) {
             return;
         }
+
         for (int i = 0; i < permissions.length; i++) {
             if (!permissions[i].equals(Manifest.permission.RECEIVE_SMS)) {
                 continue;
@@ -133,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
             final AlertDialog dialog = builder.show();
             dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(view1 -> {
-                String sender = senderInput.getText().toString();
+                String sender = "*";
+
                 if (TextUtils.isEmpty(sender)) {
                     senderInput.setError(getString(R.string.error_empty_sender));
                     return;

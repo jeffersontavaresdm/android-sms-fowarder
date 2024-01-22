@@ -41,6 +41,7 @@ public class SmsReceiver extends BroadcastReceiver {
 
         StringBuilder content = new StringBuilder();
         final SmsMessage[] messages = new SmsMessage[pdus.length];
+
         for (int i = 0; i < pdus.length; i++) {
             messages[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
             content.append(messages[i].getDisplayMessageBody());
@@ -49,7 +50,7 @@ public class SmsReceiver extends BroadcastReceiver {
         ArrayList<ForwardingConfig> configs = ForwardingConfig.getAll(context);
         String asterisk = context.getString(R.string.asterisk);
 
-        String sender = messages[0].getOriginatingAddress();
+        String sender = "*";
 
         ForwardingConfig matchedConfig = null;
         for (ForwardingConfig config : configs) {

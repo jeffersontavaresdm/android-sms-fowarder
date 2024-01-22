@@ -146,6 +146,7 @@ public class SmsReceiverTest {
             int v = Integer.parseInt(hex.substring(index, index + 2), 16);
             b[i] = (byte) v;
         }
+
         return b;
     }
 }
