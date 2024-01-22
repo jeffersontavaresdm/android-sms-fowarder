@@ -1,6 +1,6 @@
 # Android SMS Fowarder
 
-### Classes do aplicativo e suas funções
+## Classes do aplicativo e suas funções
 
 **TLSSocketFactory:**</br>
 Esta classe estende SSLSocketFactory e é usada para criar sockets seguros (SSL/TLS).
